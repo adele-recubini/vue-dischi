@@ -23,16 +23,21 @@
 
             <div class="container">
                 <img src="logo.png" alt="logo" />
-            </div>
+              <select class="" name="">
+               <option v-for="element in generi" >
+               {{element}}</option>
+             </select>
+          </div>
         </header>
 
         <div class="cds-container container">
             <!-- Disco ad esempio -->
             <div class="cd" v-for="element in dischi">
                 <img :src="element.poster">
-                <h1>{{element.title}}</h1>
+                <h4>{{element.title}}</h4>
                 <span class="autore">{{element.author}}</span>
                 <span class="anno">{{element.year}}</span>
+                <!-- <span>{{element.genre}}</span> -->
             </div>
         </div>
 
