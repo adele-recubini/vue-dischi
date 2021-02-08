@@ -6,6 +6,7 @@ var app = new Vue({
     data: {
         dischi: [],
         generi:[],
+        generiSelect:'',
 
     },
     mounted() {
