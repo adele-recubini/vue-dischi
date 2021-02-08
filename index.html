@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>ex-dischi-musicali</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
-       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<head>
+     <meta charset="utf-8">
+     <title>ex-dischi-musicali</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 
-        <link rel="stylesheet" href="style.css">
-    </head>
+     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+
+     <link rel="stylesheet" href="style.css">
+ </head>
+
     <body>
       <div id="root">
         <header>
@@ -22,12 +28,11 @@
 
         <div class="cds-container container">
             <!-- Disco ad esempio -->
-            <div class="cd"
-                v-for="element in dischi"
-                <img :src="element.poster" :alt="element.title">
+            <div class="cd" v-for="element in dischi">
+                <img :src="element.poster">
                 <h1>{{element.title}}</h1>
-                <span class="autore">{{ element.author }}</span>
-                <span class="anno">{{ element.year }}</span>
+                <span class="autore">{{element.author}}</span>
+                <span class="anno">{{element.year}}</span>
             </div>
         </div>
 
