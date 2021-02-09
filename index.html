@@ -24,7 +24,7 @@
             <div class="container">
                 <img src="logo.png" alt="logo" />
               <select v-model="generiSelect" name="">
-               <option v-for="element in generi" >
+               <option v-for="element in generi">
                {{element}}</option>
              </select>
           </div>
@@ -33,13 +33,14 @@
         <div class="cds-container container">
           <!-- il mio cd-container è il mio innerhtml
            qui stampero a schermo tutte le informazioni contenute nell array richiamato da axios e poi inserito nell array dischi.
-           come faccio a filtrare  in base ai generi ?
+           come faccio a filtrare
+            in base ai generi ?
           letteralmente gli dico che per ogni chiave dei dichi se (v-if) il disco è uguale al genere selezionato mi dovra far vedere l immagine il titolo l autore e l anno
             -->
             <div class="cd"
 
                  v-for="element in dischi"
-                 v-if="generiSelect === element.genre"
+                 v-if="generiSelect === element.genre || generiSelect === ''"
                 >
                 <img :src="element.poster">
                 <h4>{{element.title}}</h4>

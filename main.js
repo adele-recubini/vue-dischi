@@ -1,4 +1,4 @@
-// Bonus (per oggi pomeriggio): Creare una select con i seguenti generi: pop, rock, metal e jazz. In base a cosa scegliamo nella select vedremo i corrispondenti cd.
+// Creare una select con i seguenti generi: pop, rock, metal e jazz. In base a cosa scegliamo nella select vedremo i corrispondenti cd.
 
 
 var app = new Vue({
@@ -9,7 +9,7 @@ var app = new Vue({
         generiSelect:'',
 
     },
-    mounted() {
+  mounted() {
     const self = this;
     axios.get('https://flynn.boolean.careers/exercises/api/array/music')
       .then((risposta) => {
@@ -19,21 +19,11 @@ var app = new Vue({
         self.dischi.forEach((element) => {
 
           if (!self.generi.includes(element.genre)){
-             self.generi.push(element.genre)
-
-
-
+            self.generi.push(element.genre)
           }
-
         });
-
-
-
-
-  });
-
-
-    }
+      });
+  }
 
 });
 
